@@ -1,119 +1,306 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Cue · Real-time answers for interviews and meetings</title>
-<meta name="description" content="Cue is a Chrome extension that listens to your Google Meet, Zoom or Teams call and suggests what to say, in English or Hindi. 6 minutes free.">
+<title>Cue · Know what to say in meetings and interview practice</title>
+<meta name="description" content="Cue listens to your meeting or mock interview and suggests what to say in a small panel, in a second or two. English, Hindi or Hinglish. 12 minutes free.">
+<link rel="canonical" href="https://prakhar-me.github.io/cue.landingpage/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#050505">
+
+<!-- Sharing. Replace og-image.png with your own 1200x630 image if you like. Update https://prakhar-me.github.io/cue.landingpage/ if you move to your own domain. -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://prakhar-me.github.io/cue.landingpage/">
+<meta property="og:title" content="Cue · Hear the question. Know what to say.">
+<meta property="og:description" content="Real-time answer suggestions for meetings and interview practice, in English, Hindi or Hinglish. Chrome extension, 12 minutes free.">
+<meta property="og:image" content="https://prakhar-me.github.io/cue.landingpage/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cue · Hear the question. Know what to say.">
+<meta name="twitter:description" content="Real-time answer suggestions for meetings and interview practice, in English, Hindi or Hinglish.">
+<meta name="twitter:image" content="https://prakhar-me.github.io/cue.landingpage/og-image.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Doto:wght@400..900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Doto:wght@700..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Can the other person see Cue? What happens when I share my screen?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Cue is a small panel inside your Chrome tab. It is not part of your camera video, so people on the call do not see it there. If you share your whole screen, or the tab Cue is in, they will see the panel. Cue does not hide itself from screen sharing. [CONFIRM]"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What if my internet drops during a session?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Cue needs a connection to hear the call and send answers, so it pauses while you are offline and carries on when you are back. If you stay offline for about 3 minutes, the session ends and you are only charged for the 6 minute steps already started. [CONFIRM]"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I get a refund?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Unused minutes never expire, so they stay in your balance for next time. If you stop a session in its first minute before Cue answers anything, that minute comes back automatically. For refunds of a payment, see the Refund and Cancellation Policy. [CONFIRM: refund window and how refunds are paid]"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How accurate are the answers?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Answers are drafts based on what was said and what you give Cue: your resume, job description and projects. Cue can mishear names or technical terms and it can be wrong, so read an answer before you use it. [CONFIRM]"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Which apps does it work with?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Google Meet, Zoom on the web and Microsoft Teams on the web, in Google Chrome on a laptop or desktop."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I install it?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Download the zip and unzip it. In Chrome, open chrome://extensions, turn on Developer mode, click Load unpacked and pick the unzipped folder. Cue then opens a welcome page with the free demo."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How does the free trial work?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "After you install Cue, a welcome page opens with 12 free minutes. A sample interviewer asks questions and you see Cue answer them. You can also type your own. No card needed."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do minutes expire?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Buy a pack once and use it whenever you need it. Minutes are only used while a session is running, in 6 minute steps, and paused time is free."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Will it make things up about me?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It is told to use only the resume, job description and projects you give it. If something is missing, it suggests a general approach and tells you what to add."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does it work in Hindi?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Cue understands English, Hindi and Hinglish, and answers in the language of the question. You can also fix it to English only or Hindi only in Settings."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I pay?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Through Razorpay, by UPI, card, netbanking or wallet. Cue never sees your card or UPI details."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I use Cue in a real interview?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Only where the people running it allow AI help. Many interviews and exams do not, and some places need everyone's consent before a call is recorded or transcribed. Check first and follow the rules. See the Terms of Service."
+   }
+  }
+ ]
+}
+</script>
 <style>
-:root{--bg:#050505;--panel:#0d0d0d;--line:#262626;--line2:#3a3a3a;--ink:#f2f2f2;--ink2:#c8c8c8;--mute:#858585;--red:#ff3b30;
-  --dm:Doto,"Space Mono",ui-monospace,monospace;--mono:"Space Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+:root{--bg:#050505;--panel:#0d0d0d;--panel2:#161616;--line:#262626;--line2:#3a3a3a;--ink:#f2f2f2;--ink2:#d4d4d4;--mute:#b5b5b5;--red:#ff3b30;
+  --dm:Doto,ui-monospace,monospace;--sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 *{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
-body{color:var(--ink);font:15px/1.7 var(--mono);-webkit-font-smoothing:antialiased;background:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.3px) 0 0/10px 10px,var(--bg)}
+body{color:var(--ink);font:17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;background:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1.3px) 0 0/10px 10px,var(--bg)}
 ::selection{background:var(--red);color:#fff}
-a{color:inherit}a:focus-visible,summary:focus-visible{outline:1px dashed var(--red);outline-offset:4px}
-.wrap{max-width:960px;margin:0 auto;padding:0 24px}
-svg.mk{width:20px;height:20px}svg.mk circle{fill:var(--ink)}svg.mk .o{fill:#2e2e2e}svg.mk .r{fill:var(--red)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;padding:8px 14px;background:var(--ink);color:#000;border-radius:8px;z-index:20}.skip:focus{left:12px}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+svg.mk{width:20px;height:20px;flex:none}svg.mk circle{fill:var(--ink)}svg.mk .o{fill:#2e2e2e}svg.mk .r{fill:var(--red)}
 
-nav{position:sticky;top:0;z-index:5;background:rgba(5,5,5,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;gap:26px;height:62px}
-.logo{display:flex;align-items:center;gap:9px;font:800 26px/1 var(--dm);letter-spacing:.04em;text-decoration:none}
-nav .l{color:var(--mute);font-size:11.5px;text-transform:uppercase;letter-spacing:.1em;text-decoration:none}nav .l:hover{color:var(--ink)}
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(5,5,5,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:24px;height:64px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:20px;letter-spacing:.01em;text-decoration:none}
+.links{display:flex;gap:24px}.links a{color:var(--mute);font-size:15px;text-decoration:none}.links a:hover{color:var(--ink)}
 .sp{flex:1}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border-radius:99px;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;border:1px solid var(--line2);transition:background .15s,border-color .15s,transform .1s}
-.btn:active{transform:scale(.97)}.btn.p{background:var(--red);border-color:var(--red);color:#fff}.btn.p:hover{background:#ff5247}
-.btn.g:hover{border-color:var(--ink)}.btn.s{padding:9px 16px;font-size:11px}
-.btn svg{width:16px;height:16px;fill:currentColor}
+.menu{display:none;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--line2);border-radius:12px;background:transparent;color:var(--ink);cursor:pointer}
+.menu svg{width:20px;height:20px}
 
-.hero{padding:96px 0 72px;text-align:center}
-h1{font:800 clamp(34px,7vw,72px)/1.02 var(--dm);letter-spacing:.02em;text-transform:uppercase}h1 em{color:var(--red);font-style:normal}
-.hero p.s{max-width:540px;margin:26px auto 32px;color:var(--mute);font-size:15.5px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:99px;border:1px solid var(--line2);font:600 16px var(--sans);text-decoration:none;color:var(--ink);background:transparent;cursor:pointer;transition:background .15s,border-color .15s,transform .1s}
+.btn:active{transform:scale(.97)}.btn.p{background:var(--red);border-color:var(--red);color:#fff}.btn.p:hover{background:#ff5247}.btn.g:hover{border-color:var(--ink)}
+.btn.s{min-height:40px;padding:8px 16px;font-size:15px}.btn svg{width:18px;height:18px}
+
+/* hero */
+.hero{padding:88px 0 64px;text-align:center}
+h1{font:800 clamp(34px,7vw,72px)/1.04 var(--dm);letter-spacing:.02em;text-transform:uppercase}h1 em{color:var(--red);font-style:normal}
+.hero .s{max-width:600px;margin:24px auto 30px;color:var(--mute);font-size:18px}
 .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.fine{margin-top:16px;color:var(--mute);font-size:12px}
-.fine b{color:var(--ink);font-weight:400}
+.fine{margin-top:16px;color:var(--mute);font-size:15px}.fine b{color:var(--ink);font-weight:600}
+.uses{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:22px;padding:0;list-style:none}
+.uses li{padding:5px 14px;border:1px solid var(--line2);border-radius:99px;color:var(--ink2);font-size:14px}
 
-/* the panel, as it looks on a call */
-.demo{max-width:420px;margin:64px auto 0;text-align:left;border:1px solid var(--line);border-radius:20px;padding:16px 18px 18px;
+/* proof: video slot, with the panel mockup as fallback */
+.proof{max-width:640px;margin:56px auto 0}
+.video{display:block;width:100%;aspect-ratio:16/10;border:1px solid var(--line);border-radius:20px;background:#000;object-fit:cover}
+.mock{display:grid;gap:12px;justify-items:center}
+.states{display:inline-flex;padding:3px;border:1px solid var(--line);border-radius:99px;background:var(--panel)}
+.states button{min-height:36px;padding:4px 16px;border:0;border-radius:99px;background:transparent;color:var(--mute);font:500 14px var(--sans);cursor:pointer}
+.states button[aria-selected=true]{background:var(--ink);color:#000}
+.panel{width:100%;max-width:440px;text-align:left;border:1px solid var(--line);border-radius:20px;padding:16px 18px 18px;
   background:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.3px) 0 0/7px 7px,var(--panel);box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
-.demo .h{display:flex;align-items:center;gap:8px;margin-bottom:14px;font:800 18px/1 var(--dm);letter-spacing:.05em}
-.demo .h svg{width:15px;height:15px}.demo .t{font:800 14px/1 var(--dm);color:var(--ink2);margin-left:4px}
-.demo .st{display:flex;align-items:center;gap:6px;margin-left:auto;padding:3px 9px;border:1px solid var(--line2);border-radius:99px;font:400 9.5px var(--mono);text-transform:uppercase;letter-spacing:.1em}
-.led{width:5px;height:5px;border-radius:50%;background:var(--red);box-shadow:0 0 6px rgba(255,59,48,.8);animation:led 1.1s steps(1) infinite}
+.panel .h{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-weight:700}
+.panel .h svg{width:16px;height:16px}.panel .t{color:var(--mute);font-weight:500;font-variant-numeric:tabular-nums}
+.panel .st{display:flex;align-items:center;gap:6px;margin-left:auto;padding:3px 10px;border:1px solid var(--line2);border-radius:99px;font-size:12px;font-weight:500;color:var(--ink2)}
+.led{width:6px;height:6px;border-radius:50%;background:var(--red);box-shadow:0 0 6px rgba(255,59,48,.8);animation:led 1.1s steps(1) infinite}
 @keyframes led{50%{opacity:.15}}
-.badge{display:inline-flex;align-items:center;gap:6px;color:var(--red);font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.12em}
-.badge:before{content:"";width:5px;height:5px;border-radius:50%;background:var(--red)}
-.demo .q{margin:5px 0 10px;color:var(--ink2);font-size:12px}.demo .a{font-size:13px;line-height:1.7}
+.badge{display:inline-flex;align-items:center;gap:6px;color:var(--red);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.badge:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red)}
+.panel .q{margin:6px 0 10px;color:var(--mute);font-size:15px}.panel .a{font-size:16px}
+.cap{color:var(--mute);font-size:14px;text-align:center}
 
-section{padding:88px 0;background:radial-gradient(circle,var(--line2) .9px,transparent 1.1px) 0 0/6px 2px repeat-x}
-.eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:12px;color:var(--red);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em}
+/* sections */
+section{padding:84px 0;background:radial-gradient(circle,var(--line2) .9px,transparent 1.1px) 0 0/6px 2px repeat-x}
+.eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:12px;color:var(--red);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.12em}
 .eyebrow:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red)}
-h2{margin-bottom:14px;font:800 clamp(30px,5vw,50px)/1.05 var(--dm);letter-spacing:.02em;text-transform:uppercase}
-.lead{max-width:560px;margin-bottom:40px;color:var(--mute)}
+h2{margin-bottom:14px;font:800 clamp(28px,5vw,48px)/1.08 var(--dm);letter-spacing:.02em;text-transform:uppercase}
+.lead{max-width:600px;margin-bottom:36px;color:var(--mute)}
+h3{font-size:17px;font-weight:600;line-height:1.35}
 
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:s}
 .step{padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
-.step:before{counter-increment:s;content:counter(s,decimal-leading-zero);font:800 38px/1 var(--dm);color:var(--red)}
-.step h3,.f h3{margin:14px 0 6px;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
-.step p,.f p{color:var(--mute);font-size:13.5px}
+.step:before{counter-increment:s;content:counter(s,decimal-leading-zero);display:block;margin-bottom:12px;color:var(--red);font-weight:700;font-size:15px}
+.step p,.f p,.t p{margin-top:6px;color:var(--mute);font-size:16px}
 
 .feats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--panel)}
 .f{padding:22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
 .f:nth-child(3n){border-right:0}.f:nth-last-child(-n+3){border-bottom:0}
-.f h3{margin-top:0}
 
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.t{display:flex;flex-direction:column;gap:14px;padding:22px;border:1px dashed var(--line2);border-radius:18px}
+.t blockquote{font-size:16px;color:var(--ink2)}.t figcaption{color:var(--mute);font-size:14px}
+.ph{display:inline-block;padding:0 6px;border-radius:6px;background:rgba(255,59,48,.14);color:#ff8a82;font-size:.92em}
+
+.trial{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:14px;padding:18px 22px;border:1px dashed var(--line2);border-radius:18px}
+.trial b{font-size:20px}.trial span{color:var(--mute);font-size:16px}
 .packs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.pk{position:relative;display:flex;flex-direction:column;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
+.pk{position:relative;display:flex;flex-direction:column;gap:4px;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
 .pk.best{border-color:var(--red)}
-.tag{position:absolute;top:-11px;right:18px;padding:2px 10px;border-radius:99px;background:var(--red);color:#fff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em}
-.pk h3{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink2)}
-.amt{margin:12px 0 6px;font:800 54px/1 var(--dm);letter-spacing:.02em}
-.pk p{color:var(--mute);font-size:13px}.pk .ph{color:var(--red)}
-.trial{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:14px;padding:18px 24px;border:1px dashed var(--line2);border-radius:18px}
-.trial b{font:800 22px/1.2 var(--dm);letter-spacing:.03em;text-transform:uppercase}.trial span{color:var(--mute);font-size:13px}
-.rules{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px;margin-top:22px;padding:0;list-style:none;color:var(--ink2);font-size:13px}
-.rules li:before,.list li:before{content:"";display:inline-block;width:5px;height:5px;margin-right:12px;border-radius:50%;background:var(--red);vertical-align:2px}
-.list{display:grid;gap:10px;padding:0;list-style:none;color:var(--ink2);font-size:14px;max-width:640px}
+.tag{position:absolute;top:-12px;right:18px;padding:2px 10px;border-radius:99px;background:var(--red);color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.pk h3{color:var(--ink2)}
+.amt{margin:6px 0 2px;font-size:44px;font-weight:700;letter-spacing:-.02em;line-height:1.1}
+.pk .min{font-size:18px;font-weight:600}.pk .rate{color:var(--red);font-size:15px}.pk .m{color:var(--mute);font-size:15px}
+.example{margin:18px 0 0;color:var(--ink2)}
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px;margin-top:18px;padding:0;list-style:none;color:var(--ink2);font-size:16px}
+.rules li:before,.list li:before{content:"";display:inline-block;width:6px;height:6px;margin-right:12px;border-radius:50%;background:var(--red);vertical-align:2px}
+.pcta{margin-top:26px}
+.list{display:grid;gap:10px;padding:0;list-style:none;color:var(--ink2);max-width:680px}
 
 details{padding:18px 0;background:radial-gradient(circle,var(--line2) .9px,transparent 1.1px) 0 100%/6px 2px repeat-x}
-summary{display:flex;justify-content:space-between;gap:16px;cursor:pointer;list-style:none;font-weight:700;font-size:14px}summary::-webkit-details-marker{display:none}
-summary:after{content:"+";color:var(--red);font:800 20px/1 var(--dm)}details[open] summary:after{content:"−"}
-details p{max-width:640px;margin-top:10px;color:var(--mute);font-size:13.5px}
+summary{display:flex;justify-content:space-between;gap:16px;cursor:pointer;list-style:none;font-weight:600}summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--red);font-weight:700;font-size:22px;line-height:1}details[open] summary:after{content:"−"}
+details p{max-width:680px;margin-top:10px;color:var(--mute);font-size:16px}
 
-.final{text-align:center}.final .lead{margin:0 auto 30px}
-.install{max-width:460px;margin:36px auto 0;padding:20px 22px 20px 42px;text-align:left;border:1px solid var(--line);border-radius:18px;background:var(--panel);color:var(--ink2);font-size:13px;display:grid;gap:8px}
-.install b{color:var(--ink)}.install code{padding:1px 6px;border-radius:6px;background:#161616;font:12px var(--mono)}
-footer{padding:28px 0;color:var(--mute);font-size:11.5px;text-transform:uppercase;letter-spacing:.1em;background:radial-gradient(circle,var(--line2) .9px,transparent 1.1px) 0 0/6px 2px repeat-x}
-footer .wrap{display:flex;gap:22px;flex-wrap:wrap}footer a{text-decoration:none}footer a:hover{color:var(--ink)}
+.final{text-align:center}.final .lead{margin:0 auto 28px}
+.install{max-width:480px;margin:34px auto 0;padding:20px 22px 20px 44px;text-align:left;border:1px solid var(--line);border-radius:18px;background:var(--panel);color:var(--ink2);font-size:16px;display:grid;gap:8px}
+.install code{padding:1px 6px;border-radius:6px;background:var(--panel2);font-size:14px}
+.mobile{display:none;max-width:480px;margin:28px auto 0;padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--panel);text-align:left}
+.mobile p{color:var(--mute);font-size:16px;margin-bottom:12px}
+.mobile form{display:flex;gap:8px;flex-wrap:wrap}
+.mobile input{flex:1 1 200px;min-height:48px;padding:10px 14px;border:1px solid var(--line2);border-radius:12px;background:var(--bg);color:var(--ink);font:16px var(--sans)}
 
-@media(max-width:820px){.steps,.packs{grid-template-columns:1fr}.feats{grid-template-columns:1fr}.f{border-right:0}.f:nth-last-child(-n+3){border-bottom:1px solid var(--line)}.f:last-child{border-bottom:0}.rules{grid-template-columns:1fr}nav .l{display:none}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important}html{scroll-behavior:auto}}
+footer{padding:36px 0;color:var(--mute);font-size:15px;background:radial-gradient(circle,var(--line2) .9px,transparent 1.1px) 0 0/6px 2px repeat-x}
+footer .wrap{display:grid;gap:14px}
+footer nav{position:static;background:none;backdrop-filter:none;border:0}
+.flinks{display:flex;gap:10px 22px;flex-wrap:wrap}.flinks a{text-decoration:none}.flinks a:hover{color:var(--ink)}
+.contact{display:flex;gap:10px 22px;flex-wrap:wrap}
+
+@media(max-width:820px){
+  .links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;padding:8px 20px 16px;background:var(--bg);border-bottom:1px solid var(--line)}
+  .links.open{display:flex}.links a{padding:12px 0;font-size:17px;border-bottom:1px solid var(--line)}
+  .menu{display:inline-flex}
+  nav .wrap>.btn.s{display:none}
+  .steps,.feats,.quotes,.packs{grid-template-columns:1fr}
+  .f{border-right:0}.f:nth-last-child(-n+3){border-bottom:1px solid var(--line)}.f:last-child{border-bottom:0}
+  .rules{grid-template-columns:1fr}
+  .mobile{display:block}
+  .hero{padding-top:64px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style></head><body>
+<a class="skip" href="#main">Skip to content</a>
 
-<nav><div class="wrap">
+<nav aria-label="Main"><div class="wrap">
   <a class="logo" href="#top" aria-label="Cue home"><svg class="mk" viewBox="0 0 10 10" aria-hidden="true"><circle class="o" cx="1" cy="1" r=".55"/><circle cx="3" cy="1" r=".85"/><circle cx="5" cy="1" r=".85"/><circle cx="7" cy="1" r=".85"/><circle class="o" cx="9" cy="1" r=".55"/><circle cx="1" cy="3" r=".85"/><circle class="o" cx="3" cy="3" r=".55"/><circle class="o" cx="5" cy="3" r=".55"/><circle class="o" cx="7" cy="3" r=".55"/><circle class="o" cx="9" cy="3" r=".55"/><circle cx="1" cy="5" r=".85"/><circle class="o" cx="3" cy="5" r=".55"/><circle class="o" cx="5" cy="5" r=".55"/><circle class="o" cx="7" cy="5" r=".55"/><circle class="r" cx="9" cy="5" r=".85"/><circle cx="1" cy="7" r=".85"/><circle class="o" cx="3" cy="7" r=".55"/><circle class="o" cx="5" cy="7" r=".55"/><circle class="o" cx="7" cy="7" r=".55"/><circle class="o" cx="9" cy="7" r=".55"/><circle class="o" cx="1" cy="9" r=".55"/><circle cx="3" cy="9" r=".85"/><circle cx="5" cy="9" r=".85"/><circle cx="7" cy="9" r=".85"/><circle class="o" cx="9" cy="9" r=".55"/></svg>Cue</a>
-  <a class="l" href="#how">How it works</a><a class="l" href="#features">Features</a><a class="l" href="#pricing">Pricing</a><a class="l" href="#faq">FAQ</a>
-  <span class="sp"></span><a class="btn p s" data-download href="#download">Download</a>
+  <span class="sp"></span>
+  <div class="links" id="links">
+    <a href="#how">How it works</a><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+  </div>
+  <a class="btn p s" data-download data-track="hero_cta_click" href="#download">Download</a>
+  <button class="menu" id="menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="links"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
 </div></nav>
 
+<main id="main">
 <header class="hero" id="top"><div class="wrap">
   <h1>Hear the question.<br><em>Know what to say.</em></h1>
-  <p class="s">Cue listens to your interview or meeting and suggests an answer in a small panel, in a second or two. In English or Hindi.</p>
+  <p class="s">Cue listens to your meeting or mock interview and suggests what to say in a small panel, in a second or two. English, Hindi or Hinglish.</p>
   <div class="cta">
-    <a class="btn p" data-download href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4.5-4.5M12 14 7.5 9.5M4 17v3h16v-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Download for Chrome, free</a>
+    <a class="btn p" data-download data-track="hero_cta_click" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4.5-4.5M12 14 7.5 9.5M4 17v3h16v-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Download for Chrome, free</a>
     <a class="btn g" href="#how">How it works</a>
   </div>
-  <p class="fine"><b>6 minutes free</b> · no card needed · Google Meet, Zoom and Teams in Chrome</p>
+  <p class="fine"><b>12 minutes free</b> · no card needed · Google Meet, Zoom and Teams in Chrome</p>
+  <ul class="uses" aria-label="Use it for"><li>Team meetings</li><li>Interview practice</li><li>Client calls</li><li>Live interviews, where allowed</li></ul>
 
-  <div class="demo" aria-label="Example of the Cue panel during a call">
-    <div class="h"><svg class="mk" viewBox="0 0 10 10" aria-hidden="true"><circle cx="1" cy="3" r=".85"/><circle cx="1" cy="5" r=".85"/><circle cx="1" cy="7" r=".85"/><circle cx="3" cy="1" r=".85"/><circle cx="5" cy="1" r=".85"/><circle cx="7" cy="1" r=".85"/><circle cx="3" cy="9" r=".85"/><circle cx="5" cy="9" r=".85"/><circle cx="7" cy="9" r=".85"/><circle class="r" cx="9" cy="5" r=".85"/></svg>Cue<span class="t">12:48</span><span class="st"><i class="led"></i>Listening</span></div>
-    <span class="badge">Question</span>
-    <p class="q">Tell me about a time you handled a difficult stakeholder.</p>
-    <p class="a">Sales wanted a custom export two weeks before launch. I showed them the usage data, offered a CSV workaround for that client, and we shipped on time.</p>
+  <div class="proof">
+    <!-- Demo video slot: add demo.mp4 (about 15 seconds, muted, Cue answering a question on a Meet call) and demo-poster.png next to this file.
+         Until demo.mp4 exists, the panel mockup below is shown instead. -->
+    <video class="video" id="demoVideo" autoplay muted loop playsinline preload="metadata" poster="demo-poster.png" hidden aria-label="Cue suggesting an answer during a Google Meet call">
+      <source src="demo.mp4" type="video/mp4">
+    </video>
+    <div class="mock" id="mock">
+      <div class="states" role="tablist" aria-label="Example language">
+        <button type="button" role="tab" id="tab-en" aria-controls="state-en" aria-selected="true">English</button>
+        <button type="button" role="tab" id="tab-hi" aria-controls="state-hi" aria-selected="false">Hinglish</button>
+      </div>
+      <div class="panel" role="tabpanel" id="state-en" aria-labelledby="tab-en">
+        <div class="h"><svg class="mk" viewBox="0 0 10 10" aria-hidden="true"><circle class="o" cx="1" cy="1" r=".55"/><circle cx="3" cy="1" r=".85"/><circle cx="5" cy="1" r=".85"/><circle cx="7" cy="1" r=".85"/><circle class="o" cx="9" cy="1" r=".55"/><circle cx="1" cy="3" r=".85"/><circle class="o" cx="3" cy="3" r=".55"/><circle class="o" cx="5" cy="3" r=".55"/><circle class="o" cx="7" cy="3" r=".55"/><circle class="o" cx="9" cy="3" r=".55"/><circle cx="1" cy="5" r=".85"/><circle class="o" cx="3" cy="5" r=".55"/><circle class="o" cx="5" cy="5" r=".55"/><circle class="o" cx="7" cy="5" r=".55"/><circle class="r" cx="9" cy="5" r=".85"/><circle cx="1" cy="7" r=".85"/><circle class="o" cx="3" cy="7" r=".55"/><circle class="o" cx="5" cy="7" r=".55"/><circle class="o" cx="7" cy="7" r=".55"/><circle class="o" cx="9" cy="7" r=".55"/><circle class="o" cx="1" cy="9" r=".55"/><circle cx="3" cy="9" r=".85"/><circle cx="5" cy="9" r=".85"/><circle cx="7" cy="9" r=".85"/><circle class="o" cx="9" cy="9" r=".55"/></svg>Cue <span class="t">12:48</span><span class="st"><i class="led"></i>Listening</span></div>
+        <span class="badge">Question</span>
+        <p class="q">Can you walk us through the plan for the Q3 launch?</p>
+        <p class="a">We ship in two phases. Phase one in July covers payments and onboarding. Phase two in August adds reporting, once we have two weeks of data from phase one.</p>
+      </div>
+      <div class="panel" role="tabpanel" id="state-hi" aria-labelledby="tab-hi" hidden>
+        <div class="h"><svg class="mk" viewBox="0 0 10 10" aria-hidden="true"><circle class="o" cx="1" cy="1" r=".55"/><circle cx="3" cy="1" r=".85"/><circle cx="5" cy="1" r=".85"/><circle cx="7" cy="1" r=".85"/><circle class="o" cx="9" cy="1" r=".55"/><circle cx="1" cy="3" r=".85"/><circle class="o" cx="3" cy="3" r=".55"/><circle class="o" cx="5" cy="3" r=".55"/><circle class="o" cx="7" cy="3" r=".55"/><circle class="o" cx="9" cy="3" r=".55"/><circle cx="1" cy="5" r=".85"/><circle class="o" cx="3" cy="5" r=".55"/><circle class="o" cx="5" cy="5" r=".55"/><circle class="o" cx="7" cy="5" r=".55"/><circle class="r" cx="9" cy="5" r=".85"/><circle cx="1" cy="7" r=".85"/><circle class="o" cx="3" cy="7" r=".55"/><circle class="o" cx="5" cy="7" r=".55"/><circle class="o" cx="7" cy="7" r=".55"/><circle class="o" cx="9" cy="7" r=".55"/><circle class="o" cx="1" cy="9" r=".55"/><circle cx="3" cy="9" r=".85"/><circle cx="5" cy="9" r=".85"/><circle cx="7" cy="9" r=".85"/><circle class="o" cx="9" cy="9" r=".55"/></svg>Cue <span class="t">03:12</span><span class="st"><i class="led"></i>Listening</span></div>
+        <span class="badge">Question</span>
+        <p class="q">Aapne apne last project mein deadline miss hone se kaise bachaya?</p>
+        <p class="a">Humne scope ko do parts mein divide kiya. Pehle core feature time pe ship kiya, aur baaki cheezein next sprint mein le gaye. Isse launch date same rahi.</p>
+      </div>
+      <p class="cap">An example of the Cue panel during a call</p>
+    </div>
   </div>
 </div></header>
 
 <section id="how"><div class="wrap">
   <p class="eyebrow">How it works</p><h2>Three steps.</h2><p class="lead">No chatbot to type into during the call. Cue waits until someone asks you something.</p>
   <div class="steps">
-    <div class="step"><h3>Add your context</h3><p>Upload your resume, paste the job description and list your projects. Answers use your real experience.</p></div>
+    <div class="step"><h3>Add your context</h3><p>Upload your resume, paste the job description or meeting notes, and list your projects. Answers use your real experience.</p></div>
     <div class="step"><h3>Start on your call</h3><p>Open Meet, Zoom or Teams in Chrome, click the Cue icon, pick the length and press Start.</p></div>
     <div class="step"><h3>Glance and speak</h3><p>When a question ends, a suggested answer streams into the panel. Say it in your own words.</p></div>
   </div>
@@ -122,34 +309,46 @@ footer .wrap{display:flex;gap:22px;flex-wrap:wrap}footer a{text-decoration:none}
 <section id="features"><div class="wrap">
   <p class="eyebrow">Features</p><h2>Everything in one small panel.</h2><p class="lead">Drag it, resize it, set its opacity or shrink it to a dot.</p>
   <div class="feats">
-    <div class="f"><h3>Hears the call</h3><p>Listens to the other side of the call and spots when a question is finished, so it does not fire on every word.</p></div>
-    <div class="f"><h3>English and Hindi</h3><p>Understands both, including Hinglish, and answers in the language the question was asked in.</p></div>
+    <div class="f"><h3>Hears the call</h3><p>Listens to the other side of the call and waits until a question is finished, so it does not fire on every word.</p></div>
+    <div class="f"><h3>English, Hindi and Hinglish</h3><p>Understands all three and answers in the language the question was asked in.</p></div>
+    <div class="f"><h3>Meeting mode</h3><p>Suggests a response, a recommendation or an action item, depending on what was asked.</p></div>
+    <div class="f"><h3>Interview practice</h3><p>Short, Detailed or STAR answers, built from your resume and the job description.</p></div>
     <div class="f"><h3>Coding questions</h3><p>"Write a function to…" gets working code, the approach, and time and space complexity.</p></div>
-    <div class="f"><h3>Three answer styles</h3><p>Short to say right away, Detailed for 30 to 60 seconds, or STAR for behavioral questions.</p></div>
     <div class="f"><h3>Simple English</h3><p>Switch to short sentences and everyday words, so answers sound like you talking.</p></div>
-    <div class="f"><h3>Interview and meeting modes</h3><p>Meeting mode suggests responses, recommendations and action items instead of interview answers.</p></div>
     <div class="f"><h3>Type to ask</h3><p>Ask Cue anything yourself, right from the panel.</p></div>
-    <div class="f"><h3>Notes after the call</h3><p>Turn on transcript saving to get a summary, the questions asked and follow-ups.</p></div>
+    <div class="f"><h3>Notes after the call</h3><p>Turn on transcript saving to get a summary, decisions and follow-ups.</p></div>
     <div class="f"><h3>Pause any time</h3><p>Pause or stop from the panel. Paused time is free.</p></div>
   </div>
 </div></section>
 
-<section id="pricing"><div class="wrap">
-  <p class="eyebrow">Pricing</p><h2>Pay for the minutes you use.</h2><p class="lead">No subscription. 1 credit is 6 minutes of live session. All prices include GST.</p>
-  <div class="trial"><b>6 minutes free</b><span>Every new account gets 1 credit to try Cue with a sample interviewer, right after install.</span></div>
-  <div class="packs">
-    <div class="pk"><h3>Starter</h3><div class="amt">₹99</div><p>10 credits · 1 hour</p><p class="ph">₹99 per hour</p></div>
-    <div class="pk"><h3>Job Hunt</h3><div class="amt">₹249</div><p>30 credits · 3 hours</p><p class="ph">₹83 per hour · save ₹51</p></div>
-    <div class="pk best"><span class="tag">Best value</span><h3>Placement Season</h3><div class="amt">₹449</div><p>60 credits · 6 hours</p><p class="ph">₹75 per hour · save ₹151</p></div>
+<section id="voices"><div class="wrap">
+  <p class="eyebrow">What early users say</p><h2>From early users.</h2>
+  <p class="lead"><span class="ph">[FILL IN: replace each card with a real quote, used with the person's permission]</span></p>
+  <div class="quotes">
+    <figure class="t"><blockquote><span class="ph">[Testimonial from real user]</span></blockquote><figcaption><span class="ph">[Name, role]</span></figcaption></figure>
+    <figure class="t"><blockquote><span class="ph">[Testimonial from real user]</span></blockquote><figcaption><span class="ph">[Name, role]</span></figcaption></figure>
+    <figure class="t"><blockquote><span class="ph">[Testimonial from real user]</span></blockquote><figcaption><span class="ph">[Name, role]</span></figcaption></figure>
   </div>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+  <p class="eyebrow">Pricing</p><h2>Pay for the minutes you use.</h2><p class="lead">No subscription. Buy minutes once and use them whenever you need them. Prices include GST.</p>
+  <div class="trial"><b>12 minutes free</b><span>Every new account gets 12 minutes to try Cue with a sample interviewer, right after install.</span></div>
+  <div class="packs">
+    <div class="pk"><h3>Starter</h3><div class="amt">₹99</div><span class="min">60 minutes</span><span class="rate">₹1.65 a minute</span></div>
+    <div class="pk"><h3>Job Hunt</h3><div class="amt">₹249</div><span class="min">180 minutes</span><span class="rate">₹1.38 a minute</span><span class="m">Save ₹51</span></div>
+    <div class="pk best"><span class="tag">Best value</span><h3>Placement Season</h3><div class="amt">₹449</div><span class="min">360 minutes</span><span class="rate">₹1.25 a minute</span><span class="m">Save ₹151</span></div>
+  </div>
+  <p class="example">Example: a 45 minute interview uses about ₹75 of a Starter pack.</p>
   <ul class="rules">
-    <li>Or pay as you go: ₹10 per credit, minimum 5</li>
-    <li>Credits never expire</li>
-    <li>Only spent while a session runs</li>
+    <li>Minutes never expire</li>
     <li>Paused time is free</li>
+    <li>Used only while a session runs, in 6 minute steps</li>
     <li>Pay by UPI, card, netbanking or wallet</li>
-    <li>Refer a friend: you both get 2 credits</li>
+    <li>Refer a friend: you both get 12 free minutes</li>
+    <li>Prices include GST</li>
   </ul>
+  <div class="pcta"><a class="btn p" data-download data-track="pricing_cta_click" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4.5-4.5M12 14 7.5 9.5M4 17v3h16v-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Start with 12 free minutes</a></div>
 </div></section>
 
 <section id="privacy"><div class="wrap">
@@ -158,42 +357,110 @@ footer .wrap{display:flex;gap:22px;flex-wrap:wrap}footer a{text-decoration:none}
     <li>Cue hears the call only during a session you start, and shows when it is listening</li>
     <li>Live transcripts stay in your browser's memory and are dropped when you stop</li>
     <li>Saving transcripts is off until you turn it on</li>
-    <li>Your resume and job description stay in your browser and are sent only to generate an answer</li>
+    <li>Your resume and notes stay in your browser and are sent only to generate an answer</li>
     <li>One button deletes everything stored</li>
   </ul>
-  <p class="lead" style="margin:28px 0 0">Use Cue only where AI help and recording are allowed. Many interviews and exams do not allow it, and some places need everyone's consent to record.</p>
+  <p class="lead" style="margin:24px 0 0">Details in the <a href="privacy.html">Privacy Policy</a>.</p>
 </div></section>
 
 <section id="faq"><div class="wrap">
   <p class="eyebrow">FAQ</p><h2>Questions.</h2>
-  <div style="max-width:720px;margin-top:20px">
+  <div style="max-width:760px;margin-top:16px">
+    <details><summary>Can the other person see Cue? What happens when I share my screen?</summary><p>Cue is a small panel inside your Chrome tab. It is not part of your camera video, so people on the call do not see it there. If you share your whole screen, or the tab Cue is in, they will see the panel. Cue does not hide itself from screen sharing. [CONFIRM]</p></details>
+    <details><summary>What if my internet drops during a session?</summary><p>Cue needs a connection to hear the call and send answers, so it pauses while you are offline and carries on when you are back. If you stay offline for about 3 minutes, the session ends and you are only charged for the 6 minute steps already started. [CONFIRM]</p></details>
+    <details><summary>Can I get a refund?</summary><p>Unused minutes never expire, so they stay in your balance for next time. If you stop a session in its first minute before Cue answers anything, that minute comes back automatically. For refunds of a payment, see the Refund and Cancellation Policy. [CONFIRM: refund window and how refunds are paid]</p></details>
+    <details><summary>How accurate are the answers?</summary><p>Answers are drafts based on what was said and what you give Cue: your resume, job description and projects. Cue can mishear names or technical terms and it can be wrong, so read an answer before you use it. [CONFIRM]</p></details>
     <details><summary>Which apps does it work with?</summary><p>Google Meet, Zoom on the web and Microsoft Teams on the web, in Google Chrome on a laptop or desktop.</p></details>
-    <details><summary>How do I install it?</summary><p>Download the zip and unzip it. In Chrome, open chrome://extensions, turn on Developer mode, click Load unpacked and pick the unzipped folder. Cue opens a welcome page with the free demo.</p></details>
-<details><summary>How does the free trial work?</summary><p>After you install Cue, a welcome page opens with a 6 minute demo. A sample interviewer asks questions and you see Cue answer them. No card needed.</p></details>
-    <details><summary>Do credits expire?</summary><p>No. Buy a pack once and use it across your whole job hunt. Credits are spent in 6 minute steps only while a session is running.</p></details>
+    <details><summary>How do I install it?</summary><p>Download the zip and unzip it. In Chrome, open chrome://extensions, turn on Developer mode, click Load unpacked and pick the unzipped folder. Cue then opens a welcome page with the free demo.</p></details>
+    <details><summary>How does the free trial work?</summary><p>After you install Cue, a welcome page opens with 12 free minutes. A sample interviewer asks questions and you see Cue answer them. You can also type your own. No card needed.</p></details>
+    <details><summary>Do minutes expire?</summary><p>No. Buy a pack once and use it whenever you need it. Minutes are only used while a session is running, in 6 minute steps, and paused time is free.</p></details>
     <details><summary>Will it make things up about me?</summary><p>It is told to use only the resume, job description and projects you give it. If something is missing, it suggests a general approach and tells you what to add.</p></details>
     <details><summary>Does it work in Hindi?</summary><p>Yes. Cue understands English, Hindi and Hinglish, and answers in the language of the question. You can also fix it to English only or Hindi only in Settings.</p></details>
     <details><summary>How do I pay?</summary><p>Through Razorpay, by UPI, card, netbanking or wallet. Cue never sees your card or UPI details.</p></details>
+    <details><summary>Can I use Cue in a real interview?</summary><p>Only where the people running it allow AI help. Many interviews and exams do not, and some places need everyone&#x27;s consent before a call is recorded or transcribed. Check first and follow the rules. See the Terms of Service.</p></details>
   </div>
 </div></section>
 
 <section class="final" id="download"><div class="wrap">
-  <h2>Try it free.</h2><p class="lead">Download Cue, take the 6 minute demo, then decide.</p>
-  <a class="btn p" data-download href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4.5-4.5M12 14 7.5 9.5M4 17v3h16v-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Download for Chrome, free</a>
-  <p class="fine">Works in Google Chrome on desktop</p>
+  <h2>Try it free.</h2><p class="lead">Download Cue, take the 12 minute demo, then decide.</p>
+  <a class="btn p" data-download data-track="hero_cta_click" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4.5-4.5M12 14 7.5 9.5M4 17v3h16v-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Download for Chrome, free</a>
+  <p class="fine">Works in Google Chrome on a laptop or desktop</p>
   <ol class="install">
     <li>Download the zip and unzip it</li>
     <li>Open <code>chrome://extensions</code> and turn on <b>Developer mode</b> (top right)</li>
     <li>Click <b>Load unpacked</b> and choose the unzipped folder</li>
-    <li>The welcome page opens with your free 6 minute demo</li>
+    <li>The welcome page opens with your 12 free minutes</li>
   </ol>
+  <div class="mobile" id="mobile">
+    <p>On your phone? Cue runs in Chrome on a laptop or desktop. Email yourself the download link for later.</p>
+    <form id="mailForm"><label class="sr" for="mailTo">Your email</label><input id="mailTo" type="email" required placeholder="you@example.com" autocomplete="email"><button class="btn p" type="submit">Email me the link</button></form>
+  </div>
 </div></section>
+</main>
 
-<footer><div class="wrap"><span>Cue</span><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#privacy">Privacy</a><a href="#faq">FAQ</a></div></footer>
+<footer><div class="wrap">
+  <nav class="flinks" aria-label="Legal"><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a href="refund.html">Refund and Cancellation Policy</a><a href="contact.html">Contact</a></nav>
+  <div class="contact">
+    <a href="mailto:support@example.com" data-fill="support email">Email: <span class="ph">[FILL IN: support email]</span></a>
+    <a href="https://wa.me/910000000000" data-fill="WhatsApp number" target="_blank" rel="noopener">WhatsApp: <span class="ph">[FILL IN: WhatsApp number]</span></a>
+  </div>
+  <p>© <span id="yr">2026</span> <span class="ph">[FILL IN: Business name]</span></p>
+</div></footer>
 
 <script>
-// Download link for the extension zip. Every download button uses it. Swap in the Chrome Web Store link once published.
+// ---- Settings to fill in ----
+// Download link for the extension zip. Swap in the Chrome Web Store link once published.
 const DOWNLOAD_URL = 'https://drive.google.com/uc?export=download&id=1gv7-Zh5o8B0hsV6reWDN5E5XjLuOFsTD';
-if (DOWNLOAD_URL) document.querySelectorAll('[data-download]').forEach(a => { a.href = DOWNLOAD_URL; a.target = '_blank'; a.rel = 'noopener'; });
+
+// ---- Analytics ----
+// [FILL IN] Send events to your analytics tool here (Google Analytics, Plausible, PostHog...).
+// Every tracked event on this page goes through this one function.
+function track(eventName, props) {
+  // e.g. window.gtag && gtag('event', eventName, props);  or  window.plausible && plausible(eventName, { props });
+  if (location.hostname === 'localhost' || location.protocol === 'file:') console.debug('[track]', eventName, props || {});
+}
+
+// Download buttons
+document.querySelectorAll('[data-download]').forEach(a => {
+  a.href = DOWNLOAD_URL; a.target = '_blank'; a.rel = 'noopener';
+  a.addEventListener('click', () => track(a.dataset.track || 'download_click', { label: a.textContent.trim() }));
+});
+
+// FAQ open
+document.querySelectorAll('#faq details').forEach(d => d.addEventListener('toggle', () => { if (d.open) track('faq_open', { question: d.querySelector('summary').textContent }); }));
+
+// Mobile: email the download link to yourself (opens the visitor's own mail app; nothing is sent to a server)
+document.getElementById('mailForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const to = document.getElementById('mailTo').value.trim();
+  track('mobile_email_submit');
+  location.href = 'mailto:' + encodeURIComponent(to) + '?subject=' + encodeURIComponent('Cue download link') +
+    '&body=' + encodeURIComponent('Open this on your laptop in Chrome:\n' + DOWNLOAD_URL + '\n\nInstall steps: ' + location.href.split('#')[0] + '#download');
+});
+
+// Mobile menu
+const menu = document.getElementById('menu'), links = document.getElementById('links');
+const setMenu = open => { links.classList.toggle('open', open); menu.setAttribute('aria-expanded', open); menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); };
+menu.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+links.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && links.classList.contains('open')) { setMenu(false); menu.focus(); } });
+
+// Demo: show the video once demo.mp4 loads; otherwise keep the panel mockup.
+const video = document.getElementById('demoVideo'), mock = document.getElementById('mock');
+video.addEventListener('loadeddata', () => { video.hidden = false; mock.hidden = true; });
+video.querySelector('source').addEventListener('error', () => { video.remove(); });
+
+// Mockup: English / Hinglish states, switched by the tabs and every 6 seconds unless reduced motion is on.
+const tabs = [...document.querySelectorAll('.states [role=tab]')];
+const select = tab => tabs.forEach(t => { const on = t === tab; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; document.getElementById(t.getAttribute('aria-controls')).hidden = !on; });
+let auto = null;
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => { clearInterval(auto); select(t); });
+  t.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { clearInterval(auto); const n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length]; select(n); n.focus(); } });
+});
+select(tabs[0]);
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) auto = setInterval(() => select(tabs[(tabs.findIndex(t => t.getAttribute('aria-selected') === 'true') + 1) % tabs.length]), 6000);
+
+document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 </body></html>
