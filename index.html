@@ -291,7 +291,7 @@ dialog::backdrop{background:rgba(0,0,0,.7);backdrop-filter:blur(4px)}
   <div class="dlg">
     <button class="close" type="button" aria-label="Close" data-close>×</button>
     <h2 id="installTitle">Install Cue</h2>
-    <p class="lead">Your download has started in a new tab.</p>
+    <p class="lead">Your download has started.</p>
     <ol>
       <li>Unzip the file you downloaded</li>
       <li>Open <code>chrome://extensions</code> and turn on <b>Developer mode</b></li>
@@ -307,8 +307,8 @@ dialog::backdrop{background:rgba(0,0,0,.7);backdrop-filter:blur(4px)}
 
 <script>
 // ---- Settings to fill in ----
-// Download link for the extension zip. Swap in the Chrome Web Store link once published.
-const DOWNLOAD_URL = 'https://drive.google.com/uc?export=download&id=1gv7-Zh5o8B0hsV6reWDN5E5XjLuOFsTD';
+// Download link for the extension zip, hosted next to this page. Swap in the Chrome Web Store link once published.
+const DOWNLOAD_URL = new URL('cue.zip', location.href).href;
 
 // ---- Analytics ----
 // [FILL IN] Send events to your analytics tool here (Google Analytics, Plausible, PostHog...).
@@ -321,7 +321,7 @@ function track(eventName, props) {
 // Download buttons: start the download in a new tab, then show the install steps here.
 const dlg = document.getElementById('install');
 document.querySelectorAll('[data-download]').forEach(a => {
-  a.href = DOWNLOAD_URL; a.target = '_blank'; a.rel = 'noopener';
+  a.href = DOWNLOAD_URL; a.setAttribute('download', 'cue.zip');
   a.addEventListener('click', () => { track(a.dataset.track || 'download_click'); if (dlg.showModal && !dlg.open) dlg.showModal(); });
 });
 dlg.querySelector('[data-close]').addEventListener('click', () => dlg.close());
